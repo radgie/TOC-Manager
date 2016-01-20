@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CAFA2EF-1E8B-4D5A-A806-07D8158EED60}</ProjectGuid>
+    <ProjectGuid>{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TOCManager.DataLayer</RootNamespace>
-    <AssemblyName>TOCManager.DataLayer</AssemblyName>
+    <RootNamespace>TOCManager.Membership</RootNamespace>
+    <AssemblyName>TOCManager.Membership</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,36 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\CustomerConfiguration.cs" />
-    <Compile Include="Configurations\Base\EntityBaseConfiguration.cs" />
-    <Compile Include="Configurations\ProjectConfiguration.cs" />
-    <Compile Include="Configurations\ProjectRoleConfiguration.cs" />
-    <Compile Include="Configurations\Base\ProjectsEntityBaseConfiguration.cs" />
-    <Compile Include="Configurations\UserConfiguration.cs" />
-    <Compile Include="Extensions\UserExtensions.cs" />
-    <Compile Include="Infrastructure\DbFactory.cs" />
-    <Compile Include="Infrastructure\Interfaces\IDbFactory.cs" />
-    <Compile Include="Infrastructure\Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="EncryptionService.cs" />
+    <Compile Include="Interfaces\IEncryptionService.cs" />
+    <Compile Include="Interfaces\IMembershipService.cs" />
+    <Compile Include="MembershipContext.cs" />
+    <Compile Include="MembershipService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Configurations\UserProjectRoleConfiguration.cs" />
-    <Compile Include="Repositories\EntityBaseRepository.cs" />
-    <Compile Include="Repositories\Interfaces\IEntityBaseRepository.cs" />
-    <Compile Include="Repositories\Interfaces\IProjectsEntityBaseRepository.cs" />
-    <Compile Include="Repositories\ProjectsEntityBaseRepository.cs" />
-    <Compile Include="TOCManagerContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TOCManager.DataLayer\TOCManager.DataLayer.csproj">
+      <Project>{9cafa2ef-1e8b-4d5a-a806-07d8158eed60}</Project>
+      <Name>TOCManager.DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TOCManager.Entities\TOCManager.Entities.csproj">
       <Project>{3b251984-d31f-4659-b4bf-088cdc178ec8}</Project>
       <Name>TOCManager.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

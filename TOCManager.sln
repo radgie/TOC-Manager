@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCManager.Entities", "TOCM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCManager.DataLayer", "TOCManager.DataLayer\TOCManager.DataLayer.csproj", "{9CAFA2EF-1E8B-4D5A-A806-07D8158EED60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCManager.WebApi", "TOCManager.WebApi\TOCManager.WebApi.csproj", "{5EA768AB-CA35-44AE-B3A2-D9324D98D767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCManager.Membership", "TOCManager.Membership\TOCManager.Membership.csproj", "{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9CAFA2EF-1E8B-4D5A-A806-07D8158EED60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CAFA2EF-1E8B-4D5A-A806-07D8158EED60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CAFA2EF-1E8B-4D5A-A806-07D8158EED60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA768AB-CA35-44AE-B3A2-D9324D98D767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA768AB-CA35-44AE-B3A2-D9324D98D767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA768AB-CA35-44AE-B3A2-D9324D98D767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA768AB-CA35-44AE-B3A2-D9324D98D767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE001A0D-7680-4930-AF7C-2BD0FDAE9D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace TOCManager.Entities
 {
-    public class ProjectRole : IEntityBase
+    public interface IProjectsEntityBase : IEntityBase
     {
-        public int ID { get; set; }
-
-        public string RoleName { get; set; }
+        int ProjectId { get; set; }
     }
 }

@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace TOCManager.Entities
 {
-    public class ProjectRole : IEntityBase
+    public class Project : IEntityBase
     {
         public int ID { get; set; }
 
-        public string RoleName { get; set; }
+        public string Name { get; set; }
+
+        public int OwnerId { get; set; }
+
+        public DateTime CreatedOn { get; set; }
     }
 }

@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace TOCManager.Entities
 {
-    public class UserProjectRole : IProjectsEntityBase
+    public class RawMaterialDefinition : IProjectsEntityBase
     {
         public int ID { get; set; }
 
-        public int UserId { get; set; }
-
         public int ProjectId { get; set; }
 
-        public int ProjectRoleId { get; set; }
+        public string Name { get; set; }
 
-        public virtual ProjectRole Role { get; set; }
+        public string Unit { get; set; }
+
+        public decimal UnitCost { get; set; }
+
+        public decimal UnitInventoryValue { get; set; }
     }
 }

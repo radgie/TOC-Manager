@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TOCManager.Entities.Interfaces;
 
 namespace TOCManager.Entities
 {
     /// <summary>
-    /// HomeCinema User Account
+    /// User Account
     /// </summary>
     public class User : IEntityBase
     {
@@ -29,7 +28,7 @@ namespace TOCManager.Entities
 
         public bool IsLocked { get; set; }
 
-        public DateTime DateCreated { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         public virtual ICollection<UserProjectRole> UserProjectRoles { get; set; }
     }

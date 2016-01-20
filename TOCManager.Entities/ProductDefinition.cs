@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace TOCManager.Entities
 {
-    public class ProjectRole : IEntityBase
+    public class ProductDefinition : IProjectsEntityBase
     {
         public int ID { get; set; }
 
-        public string RoleName { get; set; }
+        public int ProjectId { get; set; }
+
+        public string Name { get; set; }
+
+        public bool IsRawMaterial { get; set; }
     }
 }

@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace TOCManager.Entities
 {
-    public class ProjectRole : IEntityBase
+    class PartProductDefinition
     {
-        public int ID { get; set; }
-
-        public string RoleName { get; set; }
     }
 }

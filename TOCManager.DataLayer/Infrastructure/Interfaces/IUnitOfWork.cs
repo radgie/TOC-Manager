@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TOCManager.Entities.Interfaces
+namespace TOCManager.DataLayer.Infrastructure
 {
-    interface IEntityEnteredByUser
+    public interface IUnitOfWork
     {
-
+        void Commit();
     }
 }

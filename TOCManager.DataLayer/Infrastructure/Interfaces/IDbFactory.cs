@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TOCManager.Entities
+namespace TOCManager.DataLayer.Infrastructure
 {
-    public interface IEntityBase
+    public interface IDbFactory : IDisposable
     {
-        int ID { get; set; }
+        TOCManagerContext Init();
     }
 }
