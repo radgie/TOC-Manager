@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TOC Manager</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/metro")
+    @Scripts.Render("~/bundles/app")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+    @*
+    <script>
+    function pushMessage(t) {
+        var mes = 'Info|Implement independently';
+        $.Notify({
+            caption: mes.split("|")[0],
+            content: mes.split("|")[1],
+            type: t
+        });
+    }
+    </script>*@
+
+</head>
+<body style="background-color: #60a917">
+    <div data-bind="visible: loading">Loading...</div>
+    <!-- ko if: !loggedIn() -->
+    @Html.Partial("~/Views/Account/_Login.cshtml")
+    @Html.Partial("~/Views/Account/_Register.cshtml")
+    <!-- /ko -->
+    <!-- ko if: loggedIn -->
+    @Html.Partial("_Navbar")
+
+    <div class="page-content">
+        <div class="flex-grid no-responsive-future" style="height: 100%;">
+            <div class="row" style="height: 100%">
+                <!-- ko if: showSidebar -->
+                @Html.Partial("_Sidebar")
+                <!-- /ko -->
+
+                <div class="cell auto-size padding20 bg-white" id="cell-content">
+                    @Html.Partial("_Home")
+                    @Html.Partial("~/Views/Account/_Manage.cshtml")
+                    @Html.Partial("~/Views/Project/addProject.cshtml")
+
+                    @*<div data-bind="foreach: errors" class="padding-error">
+                        <p class="text-danger" data-bind="text: $data"></p>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+    @*<footer>
+        <div class="bottom-menu-wrapper">
+            <ul class="horizontal-menu compact">
+                <li><a>&copy; @DateTime.Now.Year - Theory of Constraints Plant Manager</a></li>
+                <li class="place-right"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>*@
+
+</body>
+</html>

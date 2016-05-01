@@ -35,7 +35,7 @@ namespace TOCManager.WebApi.App_Start
         {
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            // EF HomeCinemaContext
+            // EF TOCManagerContext
             builder.RegisterType<TOCManagerContext>()
                    .As<DbContext>()
                    .InstancePerRequest();

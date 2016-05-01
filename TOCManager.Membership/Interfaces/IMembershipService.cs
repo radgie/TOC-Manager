@@ -7,7 +7,7 @@ namespace TOCManager.Membership
     {
         MembershipContext ValidateUser(string username, string password);
 
-        User CreateUser(string username, string email, string password);
+        User CreateUser(string username, string password);
 
         User GetUser(int userId);
 

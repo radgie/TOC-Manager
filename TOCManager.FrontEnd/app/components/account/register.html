@@ -1,0 +1,30 @@
+﻿<div class="register-form padding20 block-shadow">
+    <form novalidate angular-validator name="registerUserForm" angular-validator-submit="register()">
+        <h1 class="text-light">Register new account</h1>
+        <hr class="thin" />
+        <br />
+        <div class="input-control text full-size" data-role="input">
+            <label for="registerUserName">User name</label>
+            <input type="text" id="registerUserName" name="registerUserName" ng-model="user.username"
+                   validate-on="blur" required required-message="'User name is required'">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+            <span class="input-state-error mif-warning"></span>
+        </div>
+        <br />
+        <br />
+        <div class="input-control password full-size" data-role="input">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" name="registerPassword" ng-model="user.password"
+                   validate-on="blur" required required-message="'Password is required'">
+            <button class="button helper-button reveal"><span class="mif-looks"></span></button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="form-actions">
+            <button type="submit" class="button primary">Register</button>
+            <a ng-href="#/login" class="button link">Log in</a>
+        </div>
+    </form>
+</div>

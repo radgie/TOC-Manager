@@ -50,7 +50,7 @@ namespace TOCManager.Membership
 
             return membershipCtx;
         }
-        public User CreateUser(string username, string email, string password)
+        public User CreateUser(string username, string password)
         {
             var existingUser = _userRepository.GetSingleByUsername(username);
 
@@ -65,7 +65,6 @@ namespace TOCManager.Membership
             {
                 Username = username,
                 Salt = passwordSalt,
-                Email = email,
                 IsLocked = false,
                 HashedPassword = _encryptionService.EncryptPassword(password, passwordSalt),
                 CreatedOn = DateTime.Now

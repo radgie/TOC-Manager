@@ -1,0 +1,27 @@
+﻿<div class="login-form padding20 block-shadow">
+    <form novalidate angular-validator name="loginUserForm" angular-validator-submit="login()">
+        <h1 class="text-light">Login to TOC Manager</h1>
+        <hr class="thin" />
+        <br />
+        <div class="input-control text full-size" data-role="input">
+            <label for="loginUserName">User name</label>
+            <input type="text" id="loginUserName" name="loginUserName" ng-model="user.username"
+                   validate-on="blur" required required-message="'User name is required'">
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+        <div class="input-control password full-size" data-role="input">
+            <label for="loginPassword">User password</label>
+            <input type="password" id="loginPassword" name="loginPassword" ng-model="user.password"
+                   validate-on="blur" required required-message="'Password is required'">
+            <button class="button helper-button reveal"><span class="mif-looks"></span></button>
+        </div>
+        <br />
+        <br />
+        <div class="form-actions">
+            <button type="submit" class="button primary">Log in</button>
+            <a ng-href="#/register" class="button link">Register</a>
+        </div>
+    </form>
+</div>

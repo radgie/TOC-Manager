@@ -1,0 +1,131 @@
+﻿for Metro UI
+html, body {
+    height: 100%;
+}
+
+.page-content {
+    padding-top: 3.125rem;
+    min-height: 100%;
+    height: 100%;
+}
+
+.table .input-control.checkbox {
+    line-height: 1;
+    min-height: 0;
+    height: auto;
+}
+
+@media screen and (max-width: 800px) {
+    #cell-sidebar {
+        flex-basis: 52px;
+    }
+
+    #cell-content {
+        flex-basis: calc(100% - 52px);
+    }
+}
+
+/*@media screen and (max-width: 640px) {
+    .sidebar ul {
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    .sidebar li {
+        float: left;
+    }
+
+    .sidebar li a {
+        display: block;
+        width: 52px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}*/
+
+.login-form {
+    width: 25rem;
+    height: 18.75rem;
+    position: fixed;
+    top: 50%;
+    margin-top: -9.375rem;
+    left: 50%;
+    margin-left: -12.5rem;
+    background-color: #ffffff;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.register-form {
+    width: 25rem;
+    height: 21.75rem;
+    position: fixed;
+    top: 50%;
+    margin-top: -9.375rem;
+    left: 50%;
+    margin-left: -12.5rem;
+    background-color: #ffffff;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* end for Metro UI*/
+/*body {
+    //padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+/* Set padding to display errors that occur during databinding */
+/*.padding-error {
+    padding-top: 20px;
+}*/
+
+/* styles for validation helpers */
+/*.field-validation-error {
+    color: #b94a48;
+}*/
+
+/*.field-validation-valid {
+    display: none;
+}*/
+
+/*input.input-validation-error {
+    border: 1px solid #b94a48;
+}*/
+
+/*input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}*/
+
+/*.validation-summary-errors,
+.validationMessage {
+    color: #b94a48;
+}*/
+
+/*.validation-summary-valid {
+    display: none;
+}*/
+
+/*@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}*/

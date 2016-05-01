@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using TOCManager.WebApi.Infrastructure.MessageHandlers;
 
 namespace TOCManager.WebApi
 {
@@ -10,6 +12,7 @@ namespace TOCManager.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.MessageHandlers.Add(new TOCManagerAuthHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -19,6 +22,10 @@ namespace TOCManager.WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Enable CORS for debug
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
         }
     }
 }

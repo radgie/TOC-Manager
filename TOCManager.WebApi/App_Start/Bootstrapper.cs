@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,12 @@ namespace TOCManager.WebApi.App_Start
         {
             // Configure Autofac
             AutofacWebapiConfig.Initialize(GlobalConfiguration.Configuration);
+
             //Configure AutoMapper
             //AutoMapperConfiguration.Configure();
+
+            // configure FluentValidation model validator provider
+            FluentValidationModelValidatorProvider.Configure(GlobalConfiguration.Configuration);
         }
     }
 }
