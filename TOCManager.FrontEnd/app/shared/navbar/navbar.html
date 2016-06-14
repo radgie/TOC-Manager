@@ -1,38 +1,26 @@
 ﻿<div class="app-bar fixed-top darcula" data-role="appbar">
-    <a class="app-bar-element branding" data-bind="click: navigateToHome">TOC Manager</a>
+    <a class="app-bar-element branding" ng-href="#/">TOC Manager</a>
     <span class="app-bar-divider"></span>
     <ul class="app-bar-menu">
-        <li><a href="#" data-bind="click: navigateToHome">Home</a></li>
         <li>
             <a href="#" class="dropdown-toggle">Project</a>
             <ul class="d-menu" data-role="dropdown">
-                <li><a href="#" data-bind="click: navigateToAddProject">New project</a></li>
+                <li><a ng-href="#/">New project</a></li>
                 <li class="divider"></li>
-                @*
-                <li><a href="#" onclick="showDialog('newProject')">New project 2</a></li>*@
-                <li><a href="#" class="dropdown-toggle">Open</a></li>
+                <li><a ng-href="#/" class="dropdown-toggle">Open</a></li>
             </ul>
         </li>
-        <li><a href="#">System</a></li>
-        <li>
-            <a href="#" class="dropdown-toggle">Help</a>
-            <ul class="d-menu" data-role="dropdown">
-                <li><a href="#">ChatOn</a></li>
-                <li>@Html.ActionLink("API Support", "Index", "Help", new { area = "HelpPage" }, null)</li>
-                <li class="divider"></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </li>
+        <li><a ng-href="#/">System</a></li>
     </ul>
 
-    <div class="app-bar-element place-right" data-bind="with: user">
-        <span class="dropdown-toggle" data-bind="text: name">
+    <div class="app-bar-element place-right"> <!--ng-bind="with: user"-->
+        <span class="dropdown-toggle" ng-bind="username">
             <span class="mif-cog"></span>
         </span>
         <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" data-role="dropdown" data-no-close="true" style="width: 220px">
             <ul class="unstyled-list fg-dark">
-                <li><a href="#" class="fg-white1 fg-hover-yellow" data-bind="click: manage">Profile</a></li>
-                <li><a href="#" class="fg-white3 fg-hover-yellow" data-bind="click: logOff">Log off</a></li>
+                <li><a href="#" class="fg-white1 fg-hover-yellow">Profile</a></li>
+                <li><a href="#" class="fg-white3 fg-hover-yellow" ng-click="logout()">Log off</a></li>
             </ul>
         </div>
     </div>

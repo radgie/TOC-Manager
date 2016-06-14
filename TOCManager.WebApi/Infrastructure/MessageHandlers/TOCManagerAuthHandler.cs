@@ -15,6 +15,7 @@ namespace TOCManager.WebApi.Infrastructure.MessageHandlers
     public class TOCManagerAuthHandler : DelegatingHandler
     {
         IEnumerable<string> authHeaderValues = null;
+
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             try

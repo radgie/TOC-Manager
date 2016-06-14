@@ -27,7 +27,6 @@ namespace TOCManager.WebApi.Infrastructure.Extensions
             return request.GetService<IProjectsEntityBaseRepository<T>>();
         }
 
-
         private static TService GetService<TService>(this HttpRequestMessage request)
         {
             IDependencyScope dependencyScope = request.GetDependencyScope();

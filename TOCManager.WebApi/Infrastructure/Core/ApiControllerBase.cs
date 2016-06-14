@@ -13,6 +13,7 @@ namespace TOCManager.WebApi.Infrastructure.Core
     {
         protected readonly IEntityBaseRepository<Error> _errorsRepository;
         protected readonly IUnitOfWork _unitOfWork;
+        protected readonly int CurrentUserId;
 
         public ApiControllerBase(IEntityBaseRepository<Error> errorsRepository, IUnitOfWork unitOfWork)
         {
@@ -61,7 +62,9 @@ namespace TOCManager.WebApi.Infrastructure.Core
                 _errorsRepository.Add(_error);
                 _unitOfWork.Commit();
             }
-            catch { }
+            catch
+            {
+            }
         }
     }
 }

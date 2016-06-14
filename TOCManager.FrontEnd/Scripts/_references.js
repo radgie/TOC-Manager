@@ -6,6 +6,7 @@
 /// <reference path="../app/components/account/register.controller.js" />
 /// <reference path="../app/components/home/index.controller.js" />
 /// <reference path="../app/components/home/root.controller.js" />
+/// <reference path="../app/components/project/project.controller.js" />
 /// <reference path="../app/components/services/api.service.js" />
 /// <reference path="../app/components/services/fileUpload.service.js" />
 /// <reference path="../app/components/services/membership.service.js" />

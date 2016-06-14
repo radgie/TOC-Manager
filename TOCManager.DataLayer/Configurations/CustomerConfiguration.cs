@@ -10,6 +10,7 @@ namespace TOCManager.DataLayer.Configurations
             Property(c => c.Phone).HasMaxLength(15);
             Property(c => c.Email).HasMaxLength(200);
             Property(c => c.Address).IsRequired().HasMaxLength(500);
+            Property(c => c.Description).HasMaxLength(4000);
         }
     }
 }

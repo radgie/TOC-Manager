@@ -9,7 +9,7 @@
     function config($routeProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "app/components/account/login.html",
+                templateUrl: "app/components/home/index.html",
                 controller: "IndexController",
                 resolve: { isAuthenticated: isAuthenticated }
             })

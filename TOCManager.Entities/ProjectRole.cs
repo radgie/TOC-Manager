@@ -11,5 +11,7 @@ namespace TOCManager.Entities
         public int ID { get; set; }
 
         public string RoleName { get; set; }
+
+        public virtual ICollection<UserProjectRole> UserProjectRoles { get; set; }
     }
 }

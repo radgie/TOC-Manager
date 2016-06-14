@@ -15,5 +15,7 @@ namespace TOCManager.Entities
         public int OwnerId { get; set; }
 
         public DateTime CreatedOn { get; set; }
+
+        public virtual ICollection<UserProjectRole> UserProjectRoles { get; set; }
     }
 }

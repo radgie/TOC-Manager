@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using TOCManager.WebApi.Mappings;
 
 namespace TOCManager.WebApi.App_Start
 {
@@ -15,7 +16,7 @@ namespace TOCManager.WebApi.App_Start
             AutofacWebapiConfig.Initialize(GlobalConfiguration.Configuration);
 
             //Configure AutoMapper
-            //AutoMapperConfiguration.Configure();
+            AutoMapperConfiguration.Configure();
 
             // configure FluentValidation model validator provider
             FluentValidationModelValidatorProvider.Configure(GlobalConfiguration.Configuration);

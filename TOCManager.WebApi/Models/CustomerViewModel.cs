@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation.Attributes;
+using TOCManager.WebApi.Infrastructure.Validators;
 
-namespace TOCManager.Entities
+namespace TOCManager.WebApi.Models
 {
-    public class Customer : IProjectsEntityBase
+    [Validator(typeof(CustomerViewModelValidator))]
+    public class CustomerViewModel
     {
         public int ID { get; set; }
 
